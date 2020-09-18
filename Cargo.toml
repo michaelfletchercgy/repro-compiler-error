@@ -1,0 +1,16 @@
+[package]
+name = "repro"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "~0.6.3"
+cortex-m-rt = "~0.6.13"
+panic-halt = "~0.2"
+
+[dependencies.embedded-hal]
+version="0.2.4"
+features=["unproven"]
+
+[dependencies.feather_m0]
+version="0.7.0"
+features=["usb", "rt"]
