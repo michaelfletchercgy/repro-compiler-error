@@ -18,14 +18,9 @@ fn main() -> ! {
     let mut parts = peripherals.PORT.split();
     let mut in_pin = parts.pa16.into_floating_input(&mut parts.port);
 
-    dht_split_read(&mut in_pin);
-
-    loop { }
-}
-
-pub fn dht_split_read<Error>(input_pin: &mut dyn InputPin<Error = Error>,
-) {
-    if let Ok(_is_high) = input_pin.is_high() {
+    if let Ok(_is_high) = in_pin.is_high() {
         // do something
     }
+
+    loop { }
 }
